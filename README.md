@@ -1,2 +1,2 @@
 # Exclusive
-A world e-commerce
+A world class e-commerce web applications 

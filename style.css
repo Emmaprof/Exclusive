@@ -1,118 +1,264 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-    <title>Document</title>
-</head>
-<body>
-    <div class="flex">
-        <div class="section-rectangle" ></div>
-    <div class="label flex">Today's</div>
-</div>
-    <div class="flash-sales-container">
-        <div class="header">
-            <h1>Flash Sales</h1>
-        </div>
-        <div class="countdown">
-            <div class="time">
-                <div class="unit">Days</div>
-                <div class="value">03</div>
-            </div>
-            <div class="colon">:</div>
-            <div class="time">
-                <div class="unit">Hours</div>
-                <div class="value">23</div>
-            </div>
-            <div class="colon">:</div>
-            <div class="time">
-                <div class="unit">Minutes</div>
-                <div class="value">19</div>
-            </div>
-            <div class="colon">:</div>
-            <div class="time">
-                <div class="unit">Seconds</div>
-                <div class="value">56</div>
-            </div>
-        </div>
-        <div class="arrows">
-            <button class="arrow-btn left">&larr;</button>
-            <button class="arrow-btn right">&rarr;</button>
-        </div>
-    </div>
-    <div class="today-image-section flex ">
-        <div class="flex-column">
-            <div class="product-image-container flex-column">
-                <div class="product-image-container1 flex flex-center">
-                    <img src="./img/nft.png" alt="">
-                    <div><i class="fa-regular fa-heart"></i></div>
-                </div>
-                <div class="cart-btn-holder">
-                    <button class="cart-btn flex">Add to Cart</button>
-                </div>
-            </div>
-            <div class="product-details">
-                <span>HAVIT HV-G92 Gamepad</span>
-                <div class="price">
-                    <span class="new-price">$120</span>
-                    <span class="old-price">$160</span>
-                </div>
-                <div class="rating">⭐⭐⭐⭐⭐ (88)</div>
-            </div>
-        </div>
-        <div class="product-image-container flex-column">
-            <div class="product-image-container1 flex flex-center">
-                <img src="./img/nft.png" alt="">
-                <div><i class="fa-regular fa-heart"></i></div>
-            </div>
-            <div class="cart-btn-holder">
-                <button class="cart-btn flex">Add to Cart</button>
-            </div>
-        </div>
-        <div class="product-image-container flex-column">
-            <div class="product-image-container1 flex flex-center">
-                <img src="./img/nft.png" alt="">
-                <div><i class="fa-regular fa-heart"></i></div>
-            </div>
-            <div class="cart-btn-holder">
-                <button class="cart-btn flex">Add to Cart</button>
-            </div>
-        </div>
-        <div class="product-image-container flex-column">
-            <div class="product-image-container1 flex flex-center">
-                <img src="./img/nft.png" alt="">
-                <div><i class="fa-regular fa-heart"></i></div>
-            </div>
-            <div class="cart-btn-holder">
-                <button class="cart-btn flex">Add to Cart</button>
-            </div>
-        </div>
-        <div class="product-image-container flex-column">
-            <div class="product-image-container1 flex flex-center">
-                <img src="./img/nft.png" alt="">
-                <div><i class="fa-regular fa-heart"></i></div>
-            </div>
-            <div class="cart-btn-holder">
-                <button class="cart-btn flex">Add to Cart</button>
-            </div>
-        </div>
-        <div class="product-image-container flex-column">
-            <div class="product-image-container1 flex flex-center">
-                <img src="./img/nft.png" alt="">
-                <div><i class="fa-regular fa-heart"></i></div>
-            </div>
-            <div class="cart-btn-holder">
-                <button class="cart-btn flex">Add to Cart</button>
-            </div>
-        </div>
-        
-    </div>
-    <div  class="flex flex-center">
-       <button class="view-all-products-btn">View All Products</button>
+@import url('https://fonts.googleapis.com/css2?family=Sora:wght@100..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-    </div>
-    <HR>
-</body>
-</html>
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+}
+
+.label {
+    color: #Db4444;
+    margin-left: 10px;
+    align-items: center;
+}
+
+body {
+    margin: 80px;
+    font-family: "Poppins", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex-align {
+    align-items: center;
+}
+
+.flex-justify-center {
+    justify-content: center;
+}
+
+.flex-center {
+    align-items: center;
+    justify-content: center; 
+}
+
+.flex-justify-between {
+    justify-content: space-between;
+}
+
+.flex-column {
+    flex-direction: column;
+}
+
+.display-none {
+    display: none;
+}
+
+.flash-sales-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 20px;
+}
+
+.header {
+    display: flex;
+    flex-direction: column;
+}
+
+.label {
+    color: #Db4444;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+h1 {
+    margin: 0;
+    font-size: 36px;
+}
+
+.countdown {
+    display: flex;
+    align-items: center;
+    font-size: 24px;
+}
+
+.time {
+    text-align: center;
+    margin: 0 5px;
+}
+
+.unit {
+    font-size: 14px;
+    color: #232323;
+}
+
+.value {
+    font-size: 36px;
+    font-weight: bold;
+}
+
+.colon {
+    font-size: 36px;
+    color: #Db4444;
+    margin: 0 5px;
+}
+
+.arrows {
+    display: flex;
+    align-items: center;
+}
+
+.arrow-btn {
+    background-color: #f0f0f0;
+    border: none;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin: 0 5px;
+}
+
+.arrow-btn:hover {
+    background-color: #e0e0e0;
+}
+
+.poppins-thin {
+    font-family: "Poppins", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.today-image-section {
+    overflow-x: auto;
+    gap: 20px;
+}
+
+.product-image-container {
+    flex-shrink: 0;
+    width: 250px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    background-color: white;
+    /* border: 1px solid #ddd; */
+    border-radius: 8px;
+    /* box-shadow: 0 2px 4px rgba(0,0,0,0.1); */
+    /* padding: 10px; */
+}
+
+.product-image-container1 {
+    width: 100%;
+    height: 250px;
+    background-color: #f5f6f6;
+    border-radius: 10px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.product-image-container1 img {
+    width: 100%;
+    height: 55%;
+    object-fit: contain;
+}
+
+.product-image-container1 div {
+    top: 10px;
+    right: 10px;
+    border-radius: 50%;
+    background-color: white;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+
+.fa-heart {
+    font-size: 1.5em;
+    color: #232323;
+    cursor: pointer;
+}
+
+.cart-btn-holder {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    bottom: 10px;
+    display: none;
+}
+
+.cart-btn {
+    background-color: #232323;
+    color: white;
+    border: none;
+    padding: 10px;
+    font-size: 1em;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    justify-content: center;
+    bottom:0px;
+    
+}
+
+.cart-btn-holder:hover {
+    background-color: #218838;
+    display: inline-block;
+}
+
+
+.product-image-container:hover .cart-btn-holder{
+    display: inline-block;
+}
+
+.section-rectangle 
+{
+    background: #DB4444;
+width: 20px;
+height: 40px;
+gap: 10px;
+opacity: 0px;
+border-radius: 5px;
+}
+
+
+.product-details > span:nth-child(1)
+{
+font-weight: bold;
+}
+
+.product-details > div:nth-child(2) > span:nth-child(1)
+{
+    color:#DB4444;
+}
+.product-details > div:nth-child(2) > span:nth-child(2)
+{
+    text-decoration: line-through;
+    opacity: 0.5;
+}
+
+.view-all-products-btn
+{
+    display: inline-block;
+    /* align-items: center; */
+    justify-content: center;
+    color:#fcfcfc;
+    background-color: #DB4444;
+    border-style: none;
+    margin: 60px;
+    height: 60px;
+    width: 250px;
+    border-radius: 6px;
+    
+}

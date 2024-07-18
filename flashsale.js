@@ -37,6 +37,10 @@ function startCountdown(duration) {
 }
 
 // Start the countdown with the initial duration
+startCountdown(initialCountdownDuration);
+
+// Scrolling effects
+
 document.addEventListener("DOMContentLoaded", function() {
     const productContainer = document.querySelector('.today-image-section');
     const leftArrow = document.querySelector('.arrow-btn.left');

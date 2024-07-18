@@ -63,6 +63,7 @@ body {
 .header {
     display: flex;
     flex-direction: column;
+    /* border: 1px solid; */
 }
 
 .label {
@@ -80,11 +81,14 @@ h1 {
     display: flex;
     align-items: center;
     font-size: 24px;
+    /* border: 1px solid; */
 }
 
 .time {
     text-align: center;
     margin: 0 5px;
+
+    padding-bottom: 20px;
 }
 
 .unit {
@@ -101,6 +105,10 @@ h1 {
     font-size: 36px;
     color: #Db4444;
     margin: 0 5px;
+    padding-bottom: 5px;
+   
+    
+    
 }
 
 .arrows {
@@ -133,8 +141,11 @@ h1 {
 }
 
 .today-image-section {
-    overflow-x: auto;
+    overflow-x:hidden;
     gap: 20px;
+    margin-right: 0 !important;
+    /* scroll-behavior: smooth; */
+    
 }
 
 .product-image-container {
@@ -149,6 +160,7 @@ h1 {
     background-color: white;
     /* border: 1px solid #ddd; */
     border-radius: 8px;
+    margin-right: 0 ;
     /* box-shadow: 0 2px 4px rgba(0,0,0,0.1); */
     /* padding: 10px; */
 }
